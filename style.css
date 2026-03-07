@@ -1,0 +1,232 @@
+/*
+ * Modern CSS Reset (2026 uyumlu versiyon)
+ * Temel amaç: tarayıcı varsayılanlarını temizlemek + mantıklı başlangıç değerleri vermek
+ * Son güncelleme trendleri: Aralık 2025 / Ocak 2026
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML temel ayarları */
+html {
+  /* Mobil cihazlarda metin boyutunu bozmamak için */
+  -webkit-text-size-adjust: 100%;
+  /* Koyu/aydınlık tema desteği */
+  /* Daha doğal satır yüksekliği */
+  line-height: 1.5;
+  /* Yumuşak kaydırma (smooth scrolling) */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+}
+/* Medya elemanları için blok davranışı + responsive */
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+/* Liste stilini sıfırlama */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Form elemanları inherit alır */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Linkler için varsayılan davranışı bozmama (istersen sonra eklersin) */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tablo için temiz başlangıç */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Metin kırılma ve okunurluk iyileştirmeleri */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Animasyon ve geçişlerde reduced-motion desteği */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dialog gibi yeni elementler için margin temizliği (2025 sonu güncellemesi) */
+dialog {
+  margin: 0;
+}
+
+/* Auto boyut animasyon desteği (2025+ modern tarayıcılar) */
+@supports (interpolate-size: allow-list) {
+  html {
+    interpolate-size: allow-list;
+  }
+}
+
+nav{
+    border-bottom: 1px gray solid;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    display: flex;
+}
+
+nav a{
+    margin: auto 0;
+    font-size: 1.5rem;
+}
+
+#hamburger{
+    border: none;
+    padding: 1rem;
+}
+
+#hamburger span{
+    display: block;
+    height: 2px;
+    width: 24px;
+    background:black;
+    margin: 5px 0;
+}
+
+#sidemenu{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65vw;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 10;
+}
+
+#sidemenu.open{
+    transform: translateX(0);
+}
+
+#sidemenu .sidemenu-list-top{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 3rem;
+    font-size: 1.5rem;
+}
+
+#sidemenu .sidemenu-list-top .sidemenu-list-top-item{
+
+    padding: 0.5rem 0;
+}
+
+#overlay{
+
+    position:fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+
+}
+
+#overlay.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero{
+
+    padding-top: 5rem;
+}
+
+
+.hero img{
+
+    margin: 0 auto 2rem auto;
+
+}
+
+.hero .news-card h1{
+
+    margin: 0 2rem;
+    font-size: clamp(1.3rem, 7vw, 1.7rem);
+    font-weight: bold;
+}
+
+.hero .news-card p{
+
+    margin: 1.5rem 2rem 0.5rem 2rem;
+}
+
+.hero .news-card a{
+
+    color: #974139;
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    margin-left: 3rem;
+}
+
+footer{
+    margin-top: 2rem;
+    background-color: #2B2B2B;
+    color: #fff;
+    width: 100%;
+    padding: 2rem;
+    font-size: clamp(1rem, 5vw, 1.2rem);
+}
+
+footer .footer-list-top .footer-list-top-item{
+
+    margin: 0.5rem 0;
+
+}
+
+footer i{
+
+    font-size: 1.5rem;
+}
