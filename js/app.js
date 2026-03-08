@@ -11,7 +11,6 @@ console.log(menu);
 button.addEventListener('click', () => {
     menu.classList.toggle('open');
     overlay.classList.toggle('open');
-
 })
 
 overlay.addEventListener('click', () => {
