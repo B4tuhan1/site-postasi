@@ -108,6 +108,10 @@ dialog {
   }
 }
 
+hr{
+    border: 3px solid #7D1207;
+}
+
 nav{
     border-bottom: 1px gray solid;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -115,11 +119,20 @@ nav{
     background-color: white;
     width: 100%;
     display: flex;
+    z-index: 100;
 }
 
 nav a{
     margin: auto 0;
     font-size: 1.5rem;
+}
+
+.navbar-desktop-img{
+    display: none;
+}
+
+.navbar-list-desktop{
+    display: none;
 }
 
 #hamburger{
@@ -135,6 +148,8 @@ nav a{
     margin: 5px 0;
 }
 
+
+
 #sidemenu{
 
     position: fixed;
@@ -145,7 +160,7 @@ nav a{
     background-color: white;
     transform: translateX(-100%);
     transition: transform 0.4s ease;
-    z-index: 10;
+    z-index: 1000;
 }
 
 #sidemenu.open{
@@ -180,39 +195,35 @@ nav a{
     visibility: visible;
 }
 
-.hero{
 
-    padding-top: 5rem;
+
+.hero .hero-header{
+
+    position: relative;
 }
 
-
-.hero img{
-
-    margin: 0 auto 2rem auto;
-
-}
-
-.hero .news-card h1{
-
-    margin: 0 2rem;
-    font-size: clamp(1.3rem, 7vw, 1.7rem);
+.hero .hero-header h1{
+    position: absolute;
+    color: black;
+    font-size: 3rem;
     font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
-.hero .news-card p{
-
-    margin: 1.5rem 2rem 0.5rem 2rem;
+.hero .hero-header hr{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 80%;
 }
 
-.hero .news-card a{
 
-    color: #974139;
-    font-size: clamp(1rem, 5vw, 1.2rem);
-    margin-left: 3rem;
-}
 
 footer{
-    margin-top: 2rem;
+    
     background-color: #2B2B2B;
     color: #fff;
     width: 100%;
@@ -226,8 +237,96 @@ footer .footer-list-top .footer-list-top-item{
 
 }
 
-footer i{
+footer .footer-list-icon-item{
 
     font-size: 1.5rem;
+}
+
+
+/* Masaüstü */
+@media (min-width: 1024px) {
+
+
+    #sidemenu{
+        display: none;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1; /* boş alanı main doldurur, footer aşağı iter */
+    }    
+    
+
+    nav{
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-mobile-h1{
+        display: none;
+    }
+
+    .navbar-list-desktop{
+
+        display: flex;
+
+    }
+
+    .navbar-desktop-img{
+        margin: 0 0 0 3rem;
+    }
+
+    nav .navbar-list-desktop .navbar-list-desktop-item {
+
+        padding: 1rem;
+        margin: auto 0;
+    }
+
+    #hamburger{
+        display: none;
+    }
+  
+    .news-card{
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .news-card .news-card-content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+
+    footer{
+        padding: 0;
+        display: flex;
+        bottom: 0;
+        justify-content: space-around;
+    }
+
+    .footer-list-top{
+        display: flex;
+    }
+
+    .footer-list-top-item{
+
+        padding: 1rem;
+    }
+
+    .footer-list-icon-item{
+
+        padding: 1.5rem;
+    }
 
 }

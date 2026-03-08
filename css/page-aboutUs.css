@@ -1,0 +1,26 @@
+.hero-content{
+    padding: 1rem;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+.hero .hero-content .soft-quote{
+    color: #6B6B6B;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.4rem;
+}
+
+.hero .hero-content hr{
+
+    margin: 3rem 0;
+
+
+}
+
+
+.hero .hero-content .editor-quote{
+
+    text-align: right;
+
+    margin: 4rem 0 2rem 0 ;
+}
+

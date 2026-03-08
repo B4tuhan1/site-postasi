@@ -1,0 +1,12 @@
+.icon-block i{
+
+    display: block;
+    font-size: clamp(1.5rem , 8vh ,7rem);
+    margin: 2rem auto;
+    
+}
+
+.icon-block p{
+    text-align: center;
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+.hero .hero-content h1{
+    font-family: serif;
+    font-size: clamp(1.5rem, 3.5vh, 2.2rem);
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.hero .hero-content .p-imgBackground{
+
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../img/site-mah.jpg');;
+
+    color: white;
+    padding: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+
+}
+
+.hero .hero-content .text-block{
+    padding: 2rem;
+}
+
+
+
+.hero .hero-content .text-block h2{
+
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+ 
+}
+
+.hero .hero-content .text-block p{
+
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+
+}
+
+.hero .hero-content .text-block p b{
+
+    font-weight: bold;
+    
+}
+
+.hero .hero-content h3{
+
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 2rem;
+}
+
+.hero .hero-content iframe{
+    margin: 2rem auto;
+}

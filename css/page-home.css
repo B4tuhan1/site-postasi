@@ -1,0 +1,55 @@
+.hero{
+
+    padding-top: 5rem;
+}
+
+
+.hero img{
+
+    margin: 0 auto 2rem auto;
+
+}
+
+.hero .news-card h1{
+
+    margin: 0 2rem;
+    font-size: clamp(1.3rem, 7vw, 1.7rem);
+    font-weight: bold;
+}
+
+.hero .news-card p{
+
+    margin: 1.5rem 2rem 0.5rem 2rem;
+}
+
+.hero .news-card a{
+
+    color: #974139;
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    margin-left: 3rem;
+}
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+
+    .news-card{
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .news-card .news-card-content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+}
